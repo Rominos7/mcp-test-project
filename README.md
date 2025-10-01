@@ -76,6 +76,13 @@ Command list
 /exit - to terminate work of the client
 > /exit
 ```
+#### Example Screenshots (in client)
+
+<img width="500" height="179" alt="Screenshot 2025-10-01 052252" src="https://github.com/user-attachments/assets/33a76741-1710-471e-aa7f-0f538055c359" />
+<img width="891" height="85" alt="Screenshot 2025-10-01 052640" src="https://github.com/user-attachments/assets/67abc1c3-5a87-4dde-a470-e1a1776d635d" />
+<img width="128" height="53" alt="Screenshot 2025-10-01 052713" src="https://github.com/user-attachments/assets/7f4373b1-6b4e-47ec-9a98-99dc325c4c46" />
+<img width="131" height="57" alt="Screenshot 2025-10-01 052912" src="https://github.com/user-attachments/assets/63a63a2e-0a7e-46e8-9616-21aaf4439374" />
+
 
 ## Project Structure
 ```
