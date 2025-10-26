@@ -5,7 +5,34 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "build:prod": "tsc --sourceMap false",
+    "postbuild": "npm run verify",
+    "clean": "rm -rf dist",
+    "verify": "node scripts/verify-build.js",
+    "prestart": "npm run build",
+    "start": "npm run start:http",
+    "start:stdio": "node dist/server.js",
+    "start:http": "node dist/server-http.js",
+    "start:client": "node dist/client.js",
+    "start:client-http": "node dist/client-http.js",
+    "dev": "npm run dev:http",
+    "dev:stdio": "tsx server.ts",
+    "dev:http": "tsx server-http.ts",
+    "dev:client": "tsx client.ts",
+    "dev:client-http": "tsx client-http.ts",
+    "dev:watch": "tsx watch server-http.ts",
+    "type-check": "tsc --noEmit",
+    "docker:build": "docker build -t mcp-server:latest .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env mcp-server:latest",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:rebuild": "docker-compose up -d --build",
+    "docker:clean": "docker-compose down -v && docker rmi mcp-server:latest"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +40,9 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.65.0",
     "@modelcontextprotocol/sdk": "^1.18.2",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
+    "express": "^5.1.0",
     "node-fetch": "^3.3.2",
     "openai": "^6.0.0",
     "readline": "^1.3.0",
@@ -21,6 +50,9 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@types/node": "^24.6.0"
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.4",
+    "@types/node": "^24.6.0",
+    "tsx": "^4.20.6"
   }
 }
