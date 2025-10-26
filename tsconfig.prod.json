@@ -1,0 +1,18 @@
+{
+  // Production build configuration
+  // Usage: tsc -p tsconfig.prod.json
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Disable source maps for production (smaller output)
+    "sourceMap": false,
+    "declaration": false,
+    "declarationMap": false,
+
+    // Remove comments from output
+    "removeComments": true,
+
+    // Optimize for production
+    "inlineSourceMap": false,
+    "inlineSources": false
+  }
+}
