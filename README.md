@@ -315,6 +315,72 @@ This architecture allows servers to leverage AI without directly accessing LLM A
 - **[CLIENT.md](CLIENT.md)** - HTTP client usage and API reference
 - **[DEVELOPMENT.md](DEVELOPMENT.md)** - Developer guide and best practices
 
+## Claude Code Skills
+
+This repository includes comprehensive **Claude Code skills** located in [`.claude/skills/`](.claude/skills/) to assist with development:
+
+### Available Skills
+
+1. **[mcp-protocol](.claude/skills/mcp-protocol/SKILL.md)** - MCP Protocol Expert
+   - Complete MCP specification knowledge (2025-03-26)
+   - JSON-RPC 2.0 protocol patterns
+   - Tools, resources, prompts implementation
+   - Transport layers (stdio, HTTP, SSE)
+   - Security and best practices
+
+2. **[mcp-project-patterns](.claude/skills/mcp-project-patterns/SKILL.md)** - Project-Specific Patterns
+   - Step-by-step guides for adding MCP features
+   - File structure conventions
+   - Zod validation patterns
+   - Integration examples
+
+3. **[nodejs](.claude/skills/nodejs/SKILL.md)** - Node.js Expert (2025)
+   - TypeScript integration and strict mode
+   - Express.js patterns and middleware
+   - Async programming and worker threads
+   - JWT/OAuth/2FA authentication
+   - Security best practices
+   - Modern DevOps & CI/CD (Husky, GitHub Actions)
+   - Message queues (BullMQ)
+   - Performance optimization
+
+4. **[docker](.claude/skills/docker/SKILL.md)** - Docker Expert (2025)
+   - Multi-stage builds and optimization
+   - Layer caching and BuildKit features
+   - Container security (rootless, scanning)
+   - Docker Compose orchestration
+   - Production deployment patterns
+   - Networking and volumes
+
+5. **[typescript](.claude/skills/typescript/SKILL.md)** - TypeScript Expert (5.x)
+   - Advanced type system mastery
+   - Generics and utility types
+   - Discriminated unions and type guards
+   - Conditional and mapped types
+   - Template literal types
+   - Decorators and metadata
+   - Strict mode configuration
+   - Performance optimization
+
+### How Skills Work
+
+When using Claude Code, these skills automatically activate when you ask questions related to:
+- MCP protocol and implementation
+- Node.js and TypeScript development
+- Docker containerization and deployment
+- Type system design and advanced patterns
+
+The skills provide context-aware assistance, ensuring consistent patterns and best practices throughout the codebase.
+
+### Skill Benefits
+
+- ✅ **Consistent Patterns** - Enforces project conventions
+- ✅ **Best Practices** - 2025 industry standards
+- ✅ **Security Focus** - Built-in security considerations
+- ✅ **Type Safety** - Strict TypeScript patterns
+- ✅ **Production Ready** - Deployment and optimization guidance
+- ✅ **Self-Documenting** - Skills serve as living documentation
+
 ## License
 MIT
 
